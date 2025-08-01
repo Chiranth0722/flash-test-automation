@@ -5,7 +5,7 @@ import pytest
 # Add parent path for import
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from device_simulator import FlashDevice
+from flash_device.core import FlashDevice
 
 # ---------- BASIC TESTS ----------
 
