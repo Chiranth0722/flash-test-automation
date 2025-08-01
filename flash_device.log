@@ -1,0 +1,110 @@
+2025-07-31 15:47:49,027 - INFO - FlashDevice initialized.
+2025-07-31 15:47:49,028 - INFO - FlashDevice initialized.
+2025-07-31 15:47:49,031 - INFO - Simulating delay: 0.13s
+2025-07-31 15:47:49,162 - INFO - WRITE: address=100, data='data123'
+2025-07-31 15:47:49,162 - INFO - Simulating delay: 0.26s
+2025-07-31 15:47:49,425 - INFO - READ: address=100, data='data123'
+2025-07-31 15:47:49,428 - INFO - FlashDevice initialized.
+2025-07-31 15:47:49,431 - INFO - Simulating delay: 0.22s
+2025-07-31 15:47:49,653 - INFO - WRITE: address=100, data='data123'
+2025-07-31 15:47:49,653 - INFO - Simulating delay: 0.32s
+2025-07-31 15:47:49,975 - INFO - ERASE: address=100
+2025-07-31 15:47:49,975 - INFO - Simulating delay: 0.15s
+2025-07-31 15:47:50,127 - WARNING - READ EMPTY: address=100
+2025-07-31 15:47:50,131 - INFO - FlashDevice initialized.
+2025-07-31 15:47:50,136 - INFO - Simulating delay: 0.2s
+2025-07-31 15:47:50,338 - INFO - WRITE: address=1, data='A'
+2025-07-31 15:47:50,338 - INFO - Simulating delay: 0.18s
+2025-07-31 15:47:50,519 - INFO - READ: address=1, data='A'
+2025-07-31 15:47:50,519 - INFO - FlashDevice initialized.
+2025-07-31 15:47:50,524 - INFO - Simulating delay: 0.34s
+2025-07-31 15:47:50,867 - INFO - WRITE: address=42, data='hello'
+2025-07-31 15:47:50,867 - INFO - Simulating delay: 0.35s
+2025-07-31 15:47:51,218 - INFO - READ: address=42, data='hello'
+2025-07-31 15:47:51,221 - INFO - FlashDevice initialized.
+2025-07-31 15:47:51,224 - INFO - Simulating delay: 0.37s
+2025-07-31 15:47:51,596 - INFO - WRITE: address=999, data='test123'
+2025-07-31 15:47:51,596 - INFO - Simulating delay: 0.1s
+2025-07-31 15:47:51,698 - INFO - READ: address=999, data='test123'
+2025-07-31 15:47:51,701 - INFO - FlashDevice initialized.
+2025-07-31 15:47:51,704 - INFO - Simulating delay: 0.45s
+2025-07-31 15:47:52,155 - ERROR - Invalid write attempt: address=abc, data=valid_data
+2025-07-31 15:47:52,158 - INFO - FlashDevice initialized.
+2025-07-31 15:47:52,161 - INFO - Simulating delay: 0.2s
+2025-07-31 15:47:52,362 - ERROR - Invalid write attempt: address=123, data=999
+2025-07-31 15:47:52,362 - INFO - FlashDevice initialized.
+2025-07-31 15:47:52,368 - INFO - Simulating delay: 0.26s
+2025-07-31 15:47:52,629 - ERROR - Invalid write attempt: address=None, data=data
+2025-07-31 15:47:52,634 - INFO - FlashDevice initialized.
+2025-07-31 15:47:52,637 - INFO - Simulating delay: 0.37s
+2025-07-31 15:47:53,017 - WARNING - READ EMPTY: address=1234
+2025-07-31 15:47:53,020 - INFO - FlashDevice initialized.
+2025-07-31 15:47:53,031 - INFO - Simulating delay: 0.3s
+2025-07-31 15:47:53,332 - WARNING - ERASE FAILED: address=9876 not found
+2025-07-31 15:47:53,333 - INFO - FlashDevice initialized.
+2025-07-31 15:47:53,338 - INFO - Simulating delay: 0.34s
+2025-07-31 15:47:53,679 - INFO - WRITE: address=0, data='data0'
+2025-07-31 15:47:53,679 - INFO - Simulating delay: 0.5s
+2025-07-31 15:47:54,180 - INFO - WRITE: address=1, data='data1'
+2025-07-31 15:47:54,180 - INFO - Simulating delay: 0.33s
+2025-07-31 15:47:54,512 - INFO - WRITE: address=2, data='data2'
+2025-07-31 15:47:54,512 - INFO - Simulating delay: 0.12s
+2025-07-31 15:47:54,634 - INFO - WRITE: address=3, data='data3'
+2025-07-31 15:47:54,634 - INFO - Simulating delay: 0.38s
+2025-07-31 15:47:55,016 - INFO - WRITE: address=4, data='data4'
+2025-07-31 15:47:55,016 - INFO - Simulating delay: 0.24s
+2025-07-31 15:47:55,259 - ERROR - Simulated random hardware failure!
+2025-07-31 15:47:55,259 - INFO - Simulating delay: 0.1s
+2025-07-31 15:47:55,361 - WARNING - Write failed: Flash capacity reached.
+2025-07-31 15:47:55,361 - INFO - Simulating delay: 0.34s
+2025-07-31 15:47:55,702 - WARNING - Write failed: Flash capacity reached.
+2025-07-31 15:47:55,702 - INFO - Simulating delay: 0.35s
+2025-07-31 15:47:56,054 - WARNING - Write failed: Flash capacity reached.
+2025-07-31 15:47:56,054 - INFO - Simulating delay: 0.5s
+2025-07-31 15:47:56,556 - WARNING - Write failed: Flash capacity reached.
+2025-07-31 15:47:56,560 - INFO - FlashDevice initialized.
+2025-07-31 15:47:56,562 - INFO - Simulating delay: 0.39s
+2025-07-31 15:47:56,954 - ERROR - Simulated random hardware failure!
+2025-07-31 15:47:56,954 - INFO - Simulating delay: 0.21s
+2025-07-31 15:47:57,165 - INFO - WRITE: address=1, data='test1'
+2025-07-31 15:47:57,165 - INFO - Simulating delay: 0.35s
+2025-07-31 15:47:57,517 - INFO - WRITE: address=2, data='test2'
+2025-07-31 15:47:57,518 - INFO - Simulating delay: 0.25s
+2025-07-31 15:47:57,769 - INFO - WRITE: address=3, data='test3'
+2025-07-31 15:47:57,769 - INFO - Simulating delay: 0.1s
+2025-07-31 15:47:57,871 - INFO - WRITE: address=4, data='test4'
+2025-07-31 15:47:57,872 - INFO - Simulating delay: 0.43s
+2025-07-31 15:47:58,303 - INFO - WRITE: address=5, data='test5'
+2025-07-31 15:47:58,303 - INFO - Simulating delay: 0.48s
+2025-07-31 15:47:58,785 - INFO - WRITE: address=6, data='test6'
+2025-07-31 15:47:58,785 - INFO - Simulating delay: 0.38s
+2025-07-31 15:47:59,167 - INFO - WRITE: address=7, data='test7'
+2025-07-31 15:47:59,167 - INFO - Simulating delay: 0.34s
+2025-07-31 15:47:59,509 - INFO - WRITE: address=8, data='test8'
+2025-07-31 15:47:59,510 - INFO - Simulating delay: 0.15s
+2025-07-31 15:47:59,661 - INFO - WRITE: address=9, data='test9'
+2025-07-31 15:47:59,661 - INFO - Simulating delay: 0.32s
+2025-07-31 15:47:59,983 - INFO - WRITE: address=10, data='test10'
+2025-07-31 15:47:59,983 - INFO - Simulating delay: 0.34s
+2025-07-31 15:48:00,325 - INFO - WRITE: address=11, data='test11'
+2025-07-31 15:48:00,325 - INFO - Simulating delay: 0.2s
+2025-07-31 15:48:00,527 - INFO - WRITE: address=12, data='test12'
+2025-07-31 15:48:00,527 - INFO - Simulating delay: 0.31s
+2025-07-31 15:48:00,839 - INFO - WRITE: address=13, data='test13'
+2025-07-31 15:48:00,839 - INFO - Simulating delay: 0.13s
+2025-07-31 15:48:00,970 - ERROR - Simulated random hardware failure!
+2025-07-31 15:48:00,970 - INFO - Simulating delay: 0.23s
+2025-07-31 15:48:01,202 - INFO - WRITE: address=15, data='test15'
+2025-07-31 15:48:01,202 - INFO - Simulating delay: 0.29s
+2025-07-31 15:48:01,493 - INFO - WRITE: address=16, data='test16'
+2025-07-31 15:48:01,494 - INFO - Simulating delay: 0.36s
+2025-07-31 15:48:01,855 - ERROR - Simulated random hardware failure!
+2025-07-31 15:48:01,855 - INFO - Simulating delay: 0.29s
+2025-07-31 15:48:02,147 - INFO - WRITE: address=18, data='test18'
+2025-07-31 15:48:02,147 - INFO - Simulating delay: 0.44s
+2025-07-31 15:48:02,589 - INFO - WRITE: address=19, data='test19'
+2025-07-31 15:48:02,593 - INFO - FlashDevice initialized.
+2025-07-31 15:48:02,595 - INFO - Simulating delay: 0.29s
+2025-07-31 15:48:02,886 - WARNING - Write failed: Device is busy.
+2025-07-31 15:48:02,886 - INFO - Simulating delay: 0.45s
+2025-07-31 15:48:03,338 - INFO - WRITE: address=0, data='should_pass'
