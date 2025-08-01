@@ -9,17 +9,18 @@ from device_simulator import FlashDevice
 
 # ---------- BASIC TESTS ----------
 
-def test_write_and_read(flash_device):
+def test_write_and_read():
     device = FlashDevice(fail_chance=0.0)
-    success = flash_device.write(100, "data123")
+    success = device.write(100, "data123")
     assert success is True
-    assert flash_device.read(100) == "data123"
+    assert device.read(100) == "data123"
 
 
-def test_erase(flash_device):
-    flash_device.write(100, "data123")
-    flash_device.erase(100)
-    assert flash_device.read(100) is None
+def test_erase():
+    device = FlashDevice(fail_chance=0.0)
+    device.write(100, "data123")
+    device.erase(100)
+    assert device.read(100) is None
 
 
 @pytest.mark.parametrize("address, data", [
@@ -27,11 +28,11 @@ def test_erase(flash_device):
     (42, "hello"),
     (999, "test123"),
 ])
-def test_write_multiple(flash_device, address, data):
+def test_write_multiple(address, data):
     device = FlashDevice(fail_chance=0.0)
-    success = flash_device.write(address, data)
+    success = device.write(address, data)
     assert success is True
-    assert flash_device.read(address) == data
+    assert device.read(address) == data
 
 
 @pytest.mark.parametrize("address, data", [
@@ -39,23 +40,25 @@ def test_write_multiple(flash_device, address, data):
     (123, 999),               # invalid data
     (None, "data"),           # null address
 ])
-def test_invalid_write_inputs(flash_device, address, data):
+def test_invalid_write_inputs(address, data):
     device = FlashDevice(fail_chance=0.0)
     with pytest.raises(ValueError):
-        flash_device.write(address, data)
+        device.write(address, data)
 
 
-def test_read_empty_address(flash_device):
-    assert flash_device.read(1234) is None
+def test_read_empty_address():
+    device = FlashDevice(fail_chance=0.0)
+    assert device.read(1234) is None
 
 
-def test_erase_empty_address(flash_device):
-    assert flash_device.erase(9876) is False
+def test_erase_empty_address():
+    device = FlashDevice(fail_chance=0.0)
+    assert device.erase(9876) is False
 
 # ---------- ADVANCED BEHAVIOR TESTS ----------
 
 def test_max_capacity_limit():
-    device = FlashDevice(max_blocks=5)
+    device = FlashDevice(max_blocks=5, fail_chance=0.0)
     success_count = 0
     for i in range(10):
         result = device.write(i, f"data{i}")
@@ -65,7 +68,7 @@ def test_max_capacity_limit():
 
 
 def test_random_failures_resilient():
-    device = FlashDevice(max_blocks=25, fail_chance=0.1)  # larger capacity
+    device = FlashDevice(max_blocks=25, fail_chance=0.1)  # Allow some failure
     passed = failed = 0
     for i in range(20):
         result = device.write(i, f"test{i}")
@@ -74,11 +77,11 @@ def test_random_failures_resilient():
         else:
             failed += 1
     assert passed + failed == 20
-    assert passed >= 15  # Should usually pass now
+    assert passed >= 15  # Ensure most writes succeed
 
 
-def test_device_busy_flag_simulation(monkeypatch):
-    device = FlashDevice()
+def test_device_busy_flag_simulation():
+    device = FlashDevice(fail_chance=0.0)
 
     # Force device to busy state
     device.busy = True
