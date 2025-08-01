@@ -28,6 +28,7 @@ def test_erase(flash_device):
     (999, "test123"),
 ])
 def test_write_multiple(flash_device, address, data):
+    device = FlashDevice(fail_chance=0.0)
     success = flash_device.write(address, data)
     assert success is True
     assert flash_device.read(address) == data
@@ -39,6 +40,7 @@ def test_write_multiple(flash_device, address, data):
     (None, "data"),           # null address
 ])
 def test_invalid_write_inputs(flash_device, address, data):
+    device = FlashDevice(fail_chance=0.0)
     with pytest.raises(ValueError):
         flash_device.write(address, data)
 
